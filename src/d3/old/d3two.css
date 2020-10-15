@@ -1,0 +1,24 @@
+body {
+  font-family: sans-serif;
+  background-color: #F9F7EB;
+}
+
+circle {
+  fill: #af90ca;
+}
+
+#menu div {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-right: 10px;
+  background-color: #aaa;
+  color: white;
+  border-radius: 5px;
+  transition: 0.3s background-color;
+  cursor: pointer;
+  user-select: none;
+}
+
+#menu div:hover {
+  background-color: #777;
+}
