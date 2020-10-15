@@ -5,7 +5,6 @@ const BarChart = ({ height, width, margin, data }) => {
   const svgRef = useRef(null);
 
   const draw = () => {
-    console.log({ data, margin, width });
     const chartWidth = width - margin.left - margin.right;
     const chartHeight = height - margin.top - margin.bottom;
 
@@ -25,8 +24,6 @@ const BarChart = ({ height, width, margin, data }) => {
     // Place Axes
     d3.select(svgRef.current).select('.x-axis').call(xAxis)
     d3.select(svgRef.current).select('.y-axis').call(yAxis);
-
-    console.log(d3);
 
     // Build the bars
     d3.select(svgRef.current).select('g.bars').selectAll('rect')

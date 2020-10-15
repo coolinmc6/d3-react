@@ -13,14 +13,17 @@ const generateData = (count) => {
 }
 
 const App = () => {
-  
+  const [data, setData] = useState(generateData(20))
 
-  
+  const newData = () => {
+    setData(generateData(Math.floor(Math.random() * 20) + 5))
+  }
 
   return (
     <div>
       <h1>App</h1>
-      <BarChart height={400} width={700} margin={{ left: 50, bottom: 30, right: 10, top: 10 }} data={generateData(20)} />
+      <button onClick={() => newData()}>New Data</button>
+      <BarChart height={400} width={700} margin={{ left: 50, bottom: 30, right: 10, top: 10 }} data={data} />
     </div>
   )
 }
